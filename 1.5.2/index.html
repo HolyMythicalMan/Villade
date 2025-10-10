@@ -21,36 +21,41 @@ if(document.location.href.startsWith("file:")) {
 alert("You cannot 'open' this file in your browser, the code doesn't work. Upload this folder to your HTTP(s) server and access it via the internet to launch the stable-download game. This is not a bug, please read the documentation");
 }else {
 window.addEventListener("load", function(){
-const relayId = Math.floor(Math.random() * 3);
+const relayId = 0;
 window.eaglercraftOpts = {
     "container": "game_frame",
     "assetsURI": "assets.epk",
     "serverWorkerURI": "worker_bootstrap.js",
     "worldsFolder": "MAIN",
-relays: [
-    /*
-	{
-        "addr": "wss://relay.theludos.com/",
-        "name": "Myth's EaglerRelay",
-        "primary": true
-    },
-    */
-    {
-        "addr": "wss://relay.deev.is/",
-        "name": "LAX1DUDE's Shared World Relay #1",
-        "primary": false
-    },
-    {
-        "addr": "wss://relay.lax1dude.net/",
-        "name": "LAX1DUDE's Shared World Relay #2",
-        "primary": false
-    },
-    {
-        "addr": "wss://relay.shhnowisnottheti.me/",
-        "name": "ayunami's Public Relay",
-        "primary": false
-    }
-]};
+    servers: [
+        {
+            "serverAddress": "wss://mc.theludos.com/",
+            "serverName": "The EagMP"
+        }
+    ],
+    relays: [
+        {
+            "addr": "wss://relay.theludos.com/",
+            "name": "theludos relay",
+            "primary": true
+        },
+        {
+            "addr": "wss://relay.deev.is/",
+            "name": "LAX1DUDE's Shared World Relay #1",
+            "primary": false
+        },
+        {
+            "addr": "wss://relay.lax1dude.net/",
+            "name": "LAX1DUDE's Shared World Relay #2",
+            "primary": false
+        },
+        {
+            "addr": "wss://relay.shhnowisnottheti.me/",
+            "name": "ayunami's Public Relay",
+            "primary": false
+        }
+    ]
+};
 (function(){
 var q = window.location.search;
 if(typeof q === 'string' && q.startsWith("?")) {

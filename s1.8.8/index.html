@@ -23,31 +23,23 @@
 					
 					// %%%%%%%%% launch options %%%%%%%%%%%%
 					
-					const relayId = Math.floor(Math.random() * 3);
+					const relayId = 0;
 					window.eaglercraftXOpts = {
 						container: "game_frame",
 						assetsURI: "assets.epk",
 						localesURI: "lang/",
 						servers: [
-							/*
 							{
 								addr: "wss://mc.theludos.com/",
-								name: "Myth's EagMP"
-							},
-							{
-								addr: "wss://proxy.theludos.com/",
-								name: "Myth's EaglerProxy"
+								name: "The EagMP"
 							}
-							*/
 						],
 						"relays": [
-							/*
 	                        {
                                 "addr": "wss://relay.theludos.com/",
-                                "comment": "Myth's EaglerRelay",
+                                "comment": "theludos relay",
 								"primary": true
                             },
-							*/
                             {
                                 "addr": "wss://relay.deev.is/",
                                 "comment": "LAX1DUDE's Shared World Relay #1",
